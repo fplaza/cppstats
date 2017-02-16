@@ -5,7 +5,7 @@ class ConcordanceTest
 {
 	public:
 		ConcordanceTest();
-        double pvalue(const double r, const unsigned int n);
+        double rtail_pvalue(const double r, const unsigned int n);
 };
 
 inline ConcordanceTest::ConcordanceTest()

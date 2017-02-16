@@ -11,7 +11,7 @@ int main(int argc, char* argv[])
     std::cout << lpval << std::endl;
 
     ConcordanceTest concordance_test;
-    const double pval= concordance_test.pvalue(0.9,5);
+    const double pval= concordance_test.rtail_pvalue(0.9,5);
     std::cout << pval << std::endl;
     return 0;
 }

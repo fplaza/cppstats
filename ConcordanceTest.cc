@@ -1,9 +1,10 @@
 #include "ConcordanceTest.hh"
 #include <boost/math/distributions/students_t.hpp>
+#include <boost/math/special_functions/fpclassify.hpp>
 
-double ConcordanceTest::pvalue(const double r, const unsigned int n)
+double ConcordanceTest::rtail_pvalue(const double r, const unsigned int n)
 {
-    if (n <= 2)
+    if (boost::math::isnan(r) || n <= 2)
         return std::numeric_limits<double>::quiet_NaN();
 
     const unsigned int df = n-2;
