@@ -4,14 +4,14 @@
 class ConcordanceTest
 {
 	public:
-		ConcordanceTest();
+		ConcordanceTest(const unsigned max_n);
+		~ConcordanceTest();
         double rtail_pvalue(const double r, const unsigned int n);
+
+    private:
+        struct Impl;
+        Impl* impl_;
+
 };
-
-inline ConcordanceTest::ConcordanceTest()
-{
-}
-
-
 
 #endif // CONCORDANCE_TEST_HH
